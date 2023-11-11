@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Universe Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/09cd734a72.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="flex flex-col gap-4 items-center">
+        <h1 class="text-5xl text-center my-5 font-bold">AI Universe Hub</h1>
+        <button class="btn btn-success capitalize">Sort by Date</button>
+    </header>
+    <main>
+        <section id="container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-black md:mx-2 lg:mx-6 my-10">
+        </section>
+        
+        <div id="loader" class="flex justify-center hidden">
+            <span class="loading loading-bars loading-lg"></span>
+        </div>
+        <div id="allBtn"></div>
+
+        <!-- Modal for show details of every cad  -->
+        <dialog id="showDetail" class="modal">
+            <div class="modal-box bg-blue-200 text-black w-11/12 max-w-5xl">
+              <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 border-2 rounded-full bg-black text-white hover:bg-black">✕</button>
+              </form>
+              <div id="modal" class="flex gap-2 flex-col-reverse md:flex-row ">
+              </div>
+            </div>
+        </dialog>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
